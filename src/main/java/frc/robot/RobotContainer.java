@@ -1,10 +1,14 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.subsystems.Drivetrain;
 
 //This is the Buttons and Commands file
 
 public class RobotContainer {
+
+//The drivetrain subsystem will be created here so that you can use it for setting default command later
+  public static Drivetrain drivetrainSubsystem = new Drivetrain();
 
 
   public RobotContainer() {

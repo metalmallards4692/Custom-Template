@@ -5,16 +5,20 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj2.command.CommandBase;
-import frc.robot.Robot;
+import frc.robot.subsystems.Drivetrain;
 
 public class DefaultDriveCommand extends CommandBase {
 /* This is a command. Pretty much what these do is take a function from a subsystem and do some stuff to it. 
 
 This command will take the drive command from the Drivetrain subsystem 
 */
-  public DefaultDriveCommand() {
+
+Drivetrain m_drivetrainSubsystem;
+
+  public DefaultDriveCommand(Drivetrain drivetrainSubsystem) {
+    this.m_drivetrainSubsystem = drivetrainSubsystem;
 // As the name implies, if the command uses a subsystem, you must add a requirenment for it to work.
-    addRequirements(Robot.m_drivetrainSubsystem);
+    addRequirements(m_drivetrainSubsystem);
   }
 
   @Override
